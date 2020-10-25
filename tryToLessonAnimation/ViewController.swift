@@ -10,13 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var viewForAnimation: UIImageView!
 
+    @IBOutlet var xConstraint: NSLayoutConstraint!
     @IBOutlet var viewCenterYConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
  
 
-        fouthAnimation()
+        animationTry7()
     }
     
     func firstAnimation() {
@@ -65,10 +66,31 @@ class ViewController: UIViewController {
     
     func fiveAnimationsWithConstrains() {
         viewCenterYConstraint.constant = 0
-        UIView.animate(withDuration: 2.0, animations: {
-            self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 2, animations: {
+              self.xConstraint.constant = self.view.frame.maxX
+              self.view.layoutIfNeeded()
+            UIView.animate(withDuration: 1, animations: {
+                self.xConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            })
             
         })
+    }
+    func sixAnimations() {
+        viewCenterYConstraint.constant = 0
+        UIView.animateKeyframes(withDuration:2, delay: 1, options: [.repeat], animations: {
+            self.xConstraint.constant = self.view.frame.maxX
+            self.view.layoutIfNeeded()
+            UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 1) {
+                self.viewForAnimation.frame.origin.x = self.view.frame.maxX
+            }
+        }, completion: nil)
+    }
+    
+    func animationTry7() {
+        UIView.animateKeyframes(withDuration: 1, delay: 0.7, animations: {
+            self.viewForAnimation.center = self.view.center
+        }, completion: nil)
     }
     
 }

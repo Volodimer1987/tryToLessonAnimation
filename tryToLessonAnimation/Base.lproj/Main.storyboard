@@ -20,21 +20,20 @@
                                 <rect key="frame" x="61.5" y="221.5" width="197" height="125"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.085592843592166901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="E9B-H9-BPP"/>
-                                    <constraint firstAttribute="width" constant="197" id="Wfv-jT-6pa"/>
+                                    <constraint firstAttribute="width" constant="197" id="GYd-Pr-Tvr"/>
+                                    <constraint firstAttribute="height" constant="125" id="VF2-Sn-jPZ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wm8-aV-RVx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NwF-St-oag"/>
-                            <constraint firstItem="Wm8-aV-RVx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YBa-1H-pZa"/>
+                            <constraint firstItem="Wm8-aV-RVx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TPz-zv-GXB"/>
+                            <constraint firstItem="Wm8-aV-RVx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WKf-M2-dgY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="viewCenterYConstraint" destination="Wm8-aV-RVx" id="6gn-AJ-dGE"/>
-                        <outlet property="viewForAnimation" destination="NwF-St-oag" id="Twx-C8-Fnl"/>
+                        <outlet property="viewForAnimation" destination="Wm8-aV-RVx" id="ye0-Wt-n7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
